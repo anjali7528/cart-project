@@ -25,6 +25,40 @@ class Cart extends React.Component{
         //this.testing();
 }
     }
+
+    handleIncreaseQuantity = (product) =>{
+        console.log('increase qty of ', product);
+        const {products} = this.state;
+        const index = products.indexOf(product);
+
+        products[index].qty += 1;
+
+        this.setState({
+            products
+        })
+    }
+
+    handledecreaseQuantity =(product) =>{
+      console.log('decrease product qty ' + product);
+      const {products} = this.state;
+      const index = products.indexOf(product);
+
+      if(products[index].qty > 0)
+         products[index].qty -= 1;
+      this.setState({
+          products
+      })
+    }
+
+    handleDeleteProduct= (id) =>{
+        const {products} = this.state;
+
+        const items = products.filter((item) =>  item.id !== id);
+
+        this.setState({
+          products: items
+        })
+    }
    
     render() {
         const {products} =this.state;
@@ -36,10 +70,13 @@ class Cart extends React.Component{
           <CartItem 
           product={product} 
           key={product.id}
-          func = {() => console.log('ssd')}
-          isloggedin={false}
-          jsx={<h1> test</h1>}
-          />
+        //   func = {() => console.log('ssd')}
+        //   isloggedin={false}
+        //   jsx={<h1> test</h1>}
+        onIncreaseQuantity ={this.handleIncreaseQuantity}
+        ondecreaseQuantity ={this. handledecreaseQuantity}
+        onDeleteProduct ={this.handleDeleteProduct}
+        />
           )
           })}
            {/* {
