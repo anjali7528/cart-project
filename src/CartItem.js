@@ -52,7 +52,7 @@ class CartItem extends React.Component{
 
     decreaseQuantity= () =>{
         this.setState((prevState) =>{
-           if(prevState.qty != 0)
+           if(prevState.qty !== 0)
             return{
                 qty: prevState.qty-1
             }
@@ -64,6 +64,7 @@ class CartItem extends React.Component{
          const { price, title,qty} = this.props.product;
         return(
            <div className="cart-item">
+               {this.props.jsx}
              <div className="left-block">
                   <img style={styles.image}/>
              </div>

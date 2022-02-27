@@ -5,20 +5,20 @@ class Cart extends React.Component{
     constructor(){
         super();
         this.state={
-            product: [
+            products: [
          {
             price: 999,
             title: 'Mobile Phone',
             qty: 1,
             img: '',
-            id:2 
+            id:1
         },
         {
             price: 99,
             title: 'Watch',
             qty: 10,
             img: '',
-            id:3
+            id:2
         }
     ]
         //this.increaseQuantity = this.increaseQuantity.bind(this);
@@ -32,7 +32,15 @@ class Cart extends React.Component{
            <div className="cart" >
           
           {products.map((product) =>{
-          return <CartItem product={product} key={product.id}/>
+          return (
+          <CartItem 
+          product={product} 
+          key={product.id}
+          func = {() => console.log('ssd')}
+          isloggedin={false}
+          jsx={<h1> test</h1>}
+          />
+          )
           })}
            {/* {
                arr.map((item) => {
