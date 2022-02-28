@@ -10,7 +10,7 @@ class App extends React.Component {
         products: [
      {
         price: 999,
-        title: 'Mobile Phone',
+        title: 'Mobile',
         qty: 1,
         img: 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-mini-blue-select-2020?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1604343706000',
         id:1
