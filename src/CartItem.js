@@ -1,6 +1,7 @@
 import React from "react";
 
 const  CartItem = (props) => {
+    //javascript basics. 
     // // constructor(){
     // //     super();
     // //     this.state={
