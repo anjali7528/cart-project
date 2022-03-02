@@ -62,6 +62,7 @@ const  CartItem = (props) => {
 
    
        // console.log('this.props', this.props);
+       //props : properties
          const { price, title,qty} = props.product;
          const {
              product, 
@@ -77,6 +78,7 @@ const  CartItem = (props) => {
 
                   <img style={styles.image} src={product.img}/>
              </div>
+
              <div  className="right-block">
                  <div style={{fontSize: 25}} >{title}</div>
                  <div style={{color: '#777'}}  >Rs {price}</div>
