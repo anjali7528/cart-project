@@ -1,13 +1,24 @@
 import React from "react";
 import Cart from "./Cart";
 import Navbar from "./Navbar";
+// firebase from 'firebase/compat/a';
+// import 'firebase/compat/auth';
+// import 'firebase/compat/firestore';
+//import { initializeApp } from 'firebase/app';
+//import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
+
 
 class App extends React.Component {
+
+  
 
   constructor(){
     super();
     this.state={
         products: [
+
+          //empty array for fetching in database
      {
         price: 999,
         title: 'Mobile',
@@ -35,6 +46,29 @@ class App extends React.Component {
     //this.testing();
 }
 }
+
+
+
+// componentDidMount(){
+
+
+//     firebase
+//     .firestore()
+//     .collection('products')
+
+//     .get()
+//     .then((snapshot) => {
+//       console.log(snapshot);
+
+//       snapshot.docs.map((doc) =>{
+//         console.log(doc.data);
+//       });
+
+//       const products = snapshot.docs.map((doc) =>{
+//         return doc.data;
+//       })
+//     });
+// }
 
 handleIncreaseQuantity = (product) =>{
     console.log('increase qty of ', product);
